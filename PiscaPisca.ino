@@ -1,7 +1,7 @@
 /*
-  
+
   Autor: Alisson Rodolfo Leite
-  Materia: Microprocessadores  
+  Materia: Microprocessadores
   Blink
 
   Turns an LED on for one second, then off for one second, repeatedly.
@@ -25,12 +25,13 @@
   http://www.arduino.cc/en/Tutorial/Blink
 */
 
-#define Pino 2
-
+#define Pino  3
+#define Pino2 2
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(Pino, OUTPUT);
+  pinMode(Pino2, OUTPUT);
 }
 
 // the loop function runs over and over again forever
@@ -42,5 +43,9 @@ void loop() {
   digitalWrite(Pino, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(1500);                       // wait for a second
   digitalWrite(Pino, LOW);    // turn the LED off by making the voltage LOW
+  delay(1500);                       // wait for a second
+  digitalWrite(Pino2, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1500);                       // wait for a second
+  digitalWrite(Pino2, LOW);    // turn the LED off by making the voltage LOW
   delay(1500);                       // wait for a second
 }
